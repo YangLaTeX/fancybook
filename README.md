@@ -3,4 +3,4 @@
 
 [Github](https://github.com/YangLaTeX/YangBook) |  [Download](https://github.com/YangLaTeX/YangBook/releases) | [Wiki](https://github.com/YangLaTeX/YangBook/wiki)
 
-# YangBook: A fancy LaTeX book template
+# FancyBook: A fancy LaTeX book template
