@@ -31,7 +31,7 @@ ENTRY                                             % class Entry {
   series                                          %   String series;
   volume                                          %   String volume;
   number                                          %   String number;
-  version    %   String version;
+  version 										                    %	  String version;
   month                                           %   String month;
   school                                          %   String school;
   institution                                     %   String institution;
@@ -73,63 +73,63 @@ STRINGS {                                         % //  declare global String va
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % define global static constants
-FUNCTION {true}  {#1}
-FUNCTION {false}  {#0}
-FUNCTION {debug.enabled}  {true}
-FUNCTION {cap.volume.en}  {"Vol~"}
-FUNCTION {cap.volume.zh}  {"卷"}
-FUNCTION {cap.edition.en}  {"~ed"}
-FUNCTION {cap.edition.zh}  {"版"}
-FUNCTION {cap.anonymous.en}  {"Anon"}
-FUNCTION {cap.anonymous.zh}  {"佚名"}
-FUNCTION {cap.no.address.en}  {"[S.l.]"}
-FUNCTION {cap.no.address.zh}  {"[出版地不详]"}
-FUNCTION {cap.no.publisher.en}  {"[s.n.]"}
-FUNCTION {cap.no.publisher.zh}  {"[出版者不详]"}
-FUNCTION {cap.et.al.en}  {", et~al"}
-FUNCTION {cap.et.al.zh}  {", 等"}
-FUNCTION {cap.translate.en}  {"~trans"}
-FUNCTION {cap.translate.zh}  {"译"}
-FUNCTION {cap.doi.url}  {"http://dx.doi.org/"}
-FUNCTION {cap.st.en}  {"st"}
-FUNCTION {cap.nd.en}  {"nd"}
-FUNCTION {cap.rd.en}  {"rd"}
-FUNCTION {cap.th.en}  {"th"}
+FUNCTION {true} 				{#1}
+FUNCTION {false} 				{#0}
+FUNCTION {debug.enabled} 		{true}
+FUNCTION {cap.volume.en} 		{"Vol~"}
+FUNCTION {cap.volume.zh} 		{"卷"}
+FUNCTION {cap.edition.en} 		{"~ed"}
+FUNCTION {cap.edition.zh} 		{"版"}
+FUNCTION {cap.anonymous.en} 	{"Anon"}
+FUNCTION {cap.anonymous.zh} 	{"佚名"}
+FUNCTION {cap.no.address.en} 	{"【S.l.】"}
+FUNCTION {cap.no.address.zh} 	{"【出版地不详】"}
+FUNCTION {cap.no.publisher.en} 	{"【s.n.】"}
+FUNCTION {cap.no.publisher.zh} 	{"【出版者不详】"}
+FUNCTION {cap.et.al.en} 		{"，et~al"}
+FUNCTION {cap.et.al.zh} 		{"，等"}
+FUNCTION {cap.translate.en} 	{"~trans"}
+FUNCTION {cap.translate.zh} 	{"译"}
+FUNCTION {cap.doi.url} 			{"http://dx.doi.org/"}
+FUNCTION {cap.st.en} 			{"st"}
+FUNCTION {cap.nd.en} 			{"nd"}
+FUNCTION {cap.rd.en} 			{"rd"}
+FUNCTION {cap.th.en} 			{"th"}
 
 FUNCTION {cap.space}      {" "}
-FUNCTION {cap.period}  {"\@. "}
-FUNCTION {cap.comma}  {"\@, "}
-FUNCTION {cap.colon}  {"\textnormal{: }"}
-FUNCTION {cap.double.slash}  {" //\thinspace{}"}
-FUNCTION {cap.dash}  {"\textnormal{-}"}
+FUNCTION {cap.period} 		{"\@. "}
+FUNCTION {cap.comma} 			{"\@，"}
+FUNCTION {cap.colon} 			{"\thinspace{}\textnormal{：}"}
+FUNCTION {cap.double.slash} 	{" //\thinspace{}"}
+FUNCTION {cap.dash} 			{"\textnormal{-}"}
 
 % Predefined latex command used to format the style of bibitems
-FUNCTION {env.bibbegin}  { "\begin{thebibliography}" }
-FUNCTION {env.bibend}    { "\end{thebibliography}" }
-FUNCTION {cmd.bibauthor}  { "\providecommand{\bibauthor}[1]{#1}" }
-FUNCTION {cmd.bibeditor}  { "\providecommand{\bibeditor}[1]{#1}" }
-FUNCTION {cmd.bibtranslator}  { "\providecommand{\bibtranslator}[1]{#1}" }
-FUNCTION {cmd.bibtitle}  { "\providecommand{\bibtitle}[1]{#1}" }
-FUNCTION {cmd.bibbooktitle}  { "\providecommand{\bibbooktitle}[1]{#1}" }
-FUNCTION {cmd.bibjournal}  { "\providecommand{\bibjournal}[1]{#1}" }
-FUNCTION {cmd.bibmark}  { "\providecommand{\bibmark}[1]{\mbox{#1}}" }
-FUNCTION {cmd.bibcountry}  { "\providecommand{\bibcountry}[1]{#1}" }
-FUNCTION {cmd.bibpatentid}  { "\providecommand{\bibpatentid}[1]{#1}" }
-FUNCTION {cmd.bibedition}  { "\providecommand{\bibedition}[1]{#1}" }
-FUNCTION {cmd.biborganization}  { "\providecommand{\biborganization}[1]{#1}" }
-FUNCTION {cmd.bibaddress}  { "\providecommand{\bibaddress}[1]{#1}" }
-FUNCTION {cmd.bibpublisher}  { "\providecommand{\bibpublisher}[1]{#1}" }
-FUNCTION {cmd.bibinstitution} { "\providecommand{\bibinstitution}[1]{#1}" }
-FUNCTION {cmd.bibschool}  { "\providecommand{\bibschool}[1]{#1}" }
-FUNCTION {cmd.bibvolume}  { "\providecommand{\bibvolume}[1]{#1}" }
-FUNCTION {cmd.bibnumber}  { "\providecommand{\bibnumber}[1]{#1}" }
-FUNCTION {cmd.bibversion}  { "\providecommand{\bibversion}[1]{#1}" }
-FUNCTION {cmd.bibpages}  { "\providecommand{\bibpages}[1]{#1}" }
-FUNCTION {cmd.bibmodifydate} { "\providecommand{\bibmodifydate}[1]{#1}" }
-FUNCTION {cmd.bibcitedate}  { "\providecommand{\bibcitedate}[1]{#1}" }
-FUNCTION {cmd.bibyear}  { "\providecommand{\bibyear}[1]{#1}" }
-FUNCTION {cmd.bibdate}  { "\providecommand{\bibdate}[1]{#1}" }
-FUNCTION {cmd.biburl}  { "\providecommand{\biburl}[1]{\newline\url{#1}}" }
+FUNCTION {env.bibbegin} 		{ "\begin{thebibliography}" }
+FUNCTION {env.bibend}   		{ "\end{thebibliography}" }
+FUNCTION {cmd.bibauthor} 		{ "\providecommand{\bibauthor}[1]{#1}" }
+FUNCTION {cmd.bibeditor} 		{ "\providecommand{\bibeditor}[1]{#1}" }
+FUNCTION {cmd.bibtranslator} 	{ "\providecommand{\bibtranslator}[1]{#1}" }
+FUNCTION {cmd.bibtitle} 		{ "\providecommand{\bibtitle}[1]{#1}" }
+FUNCTION {cmd.bibbooktitle} 	{ "\providecommand{\bibbooktitle}[1]{#1}" }
+FUNCTION {cmd.bibjournal} 		{ "\providecommand{\bibjournal}[1]{#1}" }
+FUNCTION {cmd.bibmark} 			{ "\providecommand{\bibmark}[1]{\mbox{#1}}" }
+FUNCTION {cmd.bibcountry} 		{ "\providecommand{\bibcountry}[1]{#1}" }
+FUNCTION {cmd.bibpatentid} 		{ "\providecommand{\bibpatentid}[1]{#1}" }
+FUNCTION {cmd.bibedition} 		{ "\providecommand{\bibedition}[1]{#1}" }
+FUNCTION {cmd.biborganization} 	{ "\providecommand{\biborganization}[1]{#1}" }
+FUNCTION {cmd.bibaddress} 		{ "\providecommand{\bibaddress}[1]{#1}" }
+FUNCTION {cmd.bibpublisher} 	{ "\providecommand{\bibpublisher}[1]{#1}" }
+FUNCTION {cmd.bibinstitution}	{ "\providecommand{\bibinstitution}[1]{#1}" }
+FUNCTION {cmd.bibschool} 		{ "\providecommand{\bibschool}[1]{#1}" }
+FUNCTION {cmd.bibvolume} 		{ "\providecommand{\bibvolume}[1]{#1}" }
+FUNCTION {cmd.bibnumber} 		{ "\providecommand{\bibnumber}[1]{#1}" }
+FUNCTION {cmd.bibversion} 		{ "\providecommand{\bibversion}[1]{#1}" }
+FUNCTION {cmd.bibpages} 		{ "\providecommand{\bibpages}[1]{#1}" }
+FUNCTION {cmd.bibmodifydate}	{ "\providecommand{\bibmodifydate}[1]{#1}" }
+FUNCTION {cmd.bibcitedate} 		{ "\providecommand{\bibcitedate}[1]{#1}" }
+FUNCTION {cmd.bibyear} 			{ "\providecommand{\bibyear}[1]{#1}" }
+FUNCTION {cmd.bibdate} 			{ "\providecommand{\bibdate}[1]{#1}" }
+FUNCTION {cmd.biburl} 			{ "\providecommand{\biburl}[1]{\newline\url{#1}}" }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                                                   %
@@ -332,13 +332,13 @@ FUNCTION {add.brace} {                            % String Entry::add_brace(Stri
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                                                   %
 FUNCTION {add.bracket} {                          % String Entry::bracket(String str) {
-  "(" swap$ * ")" *                               %   return "(" + str + ")";
+  "（" swap$ * "）" *                               %   return "(" + str + ")";
 }                                                 % }
                                                   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                                                   %
 FUNCTION {add.squarebracket} {                    % String Entry::add_squarebracket(String str) {
-  "[" swap$ * "]" *                               %   return "[" + str + "]";
+  "【" swap$ * "】" *                               %   return "【" + str + "】";
 }                                                 % }
                                                   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1045,6 +1045,22 @@ FUNCTION {output.address} {                       % void Entry::output_address(i
                                                   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                                                   %
+FUNCTION {output.inproaddress} {                  % void Entry::output_inproaddress(int required) {
+  'required :=                                    %   this.required = required;
+  address empty$ not {                            %   if (! empty(this.address)) {
+    cap.comma write$                              %     write(cap_comma);
+    address format.address write$                 %     write(format_address(this.address));
+  } {                                             %   } else {
+    required {                                    %     if (required == 1) {
+      "Require address: " cite$ * warning$        %       warning("Require address: " + this.cite);
+      cap.comma write$                            %       write(cap_comma);
+      cap.no.address format.address write$        %       write(format_address(cap_no_address()));
+    } 'skip$ if$                                  %     }
+  } if$                                           %   }
+}                                                 % }
+                                                  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                                  %
 FUNCTION {output.publisher} {                     % void Entry::output_publisher(int required) {
   'required :=                                    %   this.required = required;
   publisher empty$ not {                          %   if (! empty(this.publisher)) {
@@ -1207,7 +1223,7 @@ FUNCTION {output.number} {                        % void Entry::output_number(in
 FUNCTION {output.report.number} {                 % void Entry::output_report_number(int required) {
   'required :=                                    %   this.required = required;
   number empty$ not {                             %   if (! empty(this.number)) {
-   cap.colon write$                              %     write(cap_colon);
+  	cap.colon write$                              %     write(cap_colon);
     number format.report.number write$            %     write(format_report_number(this.number));
   } {                                             %   } else {
     required {                                    %     if (required == 1) {
@@ -1472,13 +1488,6 @@ FUNCTION {phdthesis} {                            % void Entry::phdthesis() {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                                                   %
 FUNCTION {masterthesis} {                         % void Entry::masterthesis() {
-  "D" set.mark                                    %   set_mark("D");
-  thesis.impl                                     %   thesis_impl();
-}                                                 % }
-                                                  %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                                                  %
-FUNCTION {mastersthesis} {                        % void Entry::mastersthesis() {
   "D" set.mark                                    %   set_mark("D");
   thesis.impl                                     %   thesis_impl();
 }                                                 % }
@@ -1751,6 +1760,33 @@ FUNCTION {inbook.impl} {                          % void Entry::inbook_impl() {
                                                   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                                                   %
+FUNCTION {inproceedings.impl} {                   % void Entry::inproceedings_impl() {
+  start.bibitem                                   %   start_bibitem();
+  true output.author                              %   output_author(true);
+  true output.title                               %   output_title(true);
+  true output.mark                                %   output_mark(true);
+  false output.translator                         %   output_translator(false);
+  cap.double.slash write$                         %   write(cap_double_slash);
+  false output.editor                             %   output_editor(false);
+  true output.series.volume.booktitle             %   output_series_volume_booktitle(true);
+  false output.edition                            %   output_edition(false);
+  publisher empty$ not {                          %   if (! empty(this.publisher)) {
+    true output.inproaddress                      %     output_inproaddress(true);
+    true output.publisher                         %     output_publisher(true);
+    cap.comma write$                              %     write(cap_comma);
+  } {                                             %   } else {
+    true output.inproaddress                      %     output_inproaddress(true);
+    cap.comma write$                              %     write(cap_comma);
+  } if$                                           %   }
+  true output.year                                %   output_year(true);
+  false output.pages                              %   output_pages(false);
+  false output.citedate                           %   output_citedate(false);
+  false output.url.or.doi                         %   output_url_or_doi(false);
+  end.bibitem                                     %   end_bibitem();
+}                                                 % }
+                                                  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                                  %
 FUNCTION {inbook} {                               % void Entry::inbook() {
   "M" set.mark                                    %   set_mark("M");
   inbook.impl                                     %   inbook_impl();
@@ -1767,7 +1803,7 @@ FUNCTION {incollection} {                         % void Entry::incollection() {
                                                   %
 FUNCTION {inproceedings} {                        % void Entry::inproceedings() {
   "C" set.mark                                    %   set_mark("C");
-  inbook.impl                                     %   inbook_impl();
+  inproceedings.impl                              %   inproceedings_impl();
 }                                                 % }
                                                   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1939,3 +1975,4 @@ EXECUTE {end.bib}                                 %   end_bib();
                                                   % }
                                                   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% End of file `GBT7714-2005.bst'
